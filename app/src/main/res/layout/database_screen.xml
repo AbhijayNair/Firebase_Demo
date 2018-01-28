@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/read_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="175dp"
+        android:text="READ DATA"/>
+
+    <Button
+        android:id="@+id/write_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/read_btn"
+        android:layout_alignBottom="@+id/read_btn"
+        android:layout_marginLeft="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_toEndOf="@+id/read_btn"
+        android:layout_toRightOf="@+id/read_btn"
+        android:text="WRITE DATA"/>
+</RelativeLayout>

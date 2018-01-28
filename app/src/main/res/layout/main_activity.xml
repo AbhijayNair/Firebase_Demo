@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/database_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="Database" />
+
+    <Button
+        android:id="@+id/rc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/database_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:text="Remote Config" />
+
+    <Button
+        android:id="@+id/noti_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rc_btn"
+        android:layout_alignStart="@+id/rc_btn"
+        android:layout_below="@+id/rc_btn"
+        android:layout_marginTop="72dp"
+        android:text="Notifications" />
+</RelativeLayout>
