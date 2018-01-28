@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(new Intent(MainActivity.this,RCExample.class));
                 }
                 else if(i == R.id.noti_btn){
-                    startActivity(new Intent(MainActivity.this,Notifications.class));
+                    startService(new Intent(MainActivity.this,FirebaseService.class));
                 }
     }
 }

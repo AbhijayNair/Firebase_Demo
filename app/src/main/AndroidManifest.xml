@@ -22,7 +22,24 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme"/>
+        <service android:name=".FirebaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".MyJobService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
         <activity android:name=".ReadData"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".NotificationActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".WriteData"
             android:theme="@style/AppTheme"/>
