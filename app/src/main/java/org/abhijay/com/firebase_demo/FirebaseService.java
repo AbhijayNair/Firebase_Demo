@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
@@ -26,7 +28,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class FirebaseService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
-
+    String message;
 
 
     /**
@@ -105,8 +107,18 @@ public class FirebaseService extends FirebaseMessagingService {
 
         if (remoteMessage.getNotification() != null) {
             Log.e(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-
+             message = remoteMessage.getNotification().getBody().toString();
         }
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+
+            @Override
+            public void run() {
+                Toast.makeText(getApplicationContext(),
+                        message,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
